@@ -1,0 +1,90 @@
+<!--First Homework Assignment-->
+<!DOCTYPEhtml>
+<html>
+    <head>
+        
+        <!--specify the standard character set-->
+        <meta charset="UTF-ch8">
+        <!--set the language to american english-->
+        <meta lang="en-us">
+        <!--project tytle-->
+        <title>Homework #1</title>
+        <!--reset browser defaults and link to css file-->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body style="background-image:url(ep_naturalwhite.png)">
+        <header>
+            
+        <!--my name in a teal box with white text-->
+        <section class="headerContent">
+            <h1 id="headerName">Jamie Reaves</h1>
+            <!--navigation bar linking the three component pages-->
+            <nav class="topnav">
+                <!--create three links: a placeholder link for the current page & links
+                    to the other two pages-->
+                <a id="about" href="index.html">About</a>
+                <a id="contact" href="#">Contact</a>
+                <a id="portfolio" href="portfolio.html">Portfolio</a>
+            </nav>
+        </section>
+        
+        </header>
+    
+    <div class="parentBox">
+        <!--central box with content-->
+        <div class="mainContent">
+            <!--header for the "contact" section-->
+            <h1 id="contentHeader">Contact</h1>
+            <br>
+            <!--box for contact form-->
+            <section class="contentBody">
+                    
+                <form>
+                    Name <br>
+                    <!--inputs for the name/email-->
+                    <input class="shortForm" type="text" name="name" placeholder="Jane Doe"> <br><br>
+                    Email <br>
+                    <input class="shortForm" type="text" name="email" placeholder="example@gmail.com"> <br><br>
+                    Message <br>
+                    <!--larger area to leave a message-->
+                    <textarea class="longForm" type="text" name="message" style="height:200px"></textarea> <br><br>
+                    <!--a submit button and a reset button-->
+                    <input class="contactButton" type="submit" value="Submit">
+                    <input class="resetButton" type="reset" value="Clear"><br>
+                </form>
+
+            </section>
+        </div>
+    
+         <!--central box with social sidebar-->
+         <div class="sideBar">
+                <div id="sideBarHeader">Connect with me</div>
+                <br>
+                <div class="sLinksCont">
+                    <a class="socialLinks" href="#">
+                        <img class="socTab" src="assets/images/GitHub-Mark-32px.png" class="social" alt="Github">
+                    </a>
+                    <a class="socialLinks" href="#">
+                        <img class="socTab" src="assets/images/if_square-linkedin_317725.png" class="social" alt="LinkedIn">       
+                    </a>
+                    <a class="socialLinks" href="#">
+                        <img class="socTab" src="assets/images/stackoverflow-2-32.png" class="social" alt="StackOverflow">
+                    </a>
+                </div>
+            </div>
+    
+    </div>
+        <!--barrier spacer so that the footer doesn't overlap the main content if the height of
+            the main content>the height of the browser window-->
+        <div class="spacer"></div>
+        
+        <!--footer with the copyright warning-->
+        <div class="footer">
+                <p id="footerText">copyright &copy;</p>
+        <div/>
+    </body>
+</html>
