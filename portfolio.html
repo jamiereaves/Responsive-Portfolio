@@ -1,4 +1,3 @@
-<!--First Homework Assignment-->
 <!DOCTYPEhtml>
 <html>
     <head>
@@ -7,43 +6,45 @@
         <meta charset="UTF-ch8">
         <!--set the language to american english-->
         <meta lang="en-us">
+        <!--set the viewport to make sure the page displays correctly on all devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--project tytle-->
-        <title>Homework #1</title>
+        <title>Homework #2</title>
         <!--reset browser defaults and link to css file-->
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
 
+    <!--set background image-->
     <body style="background-image:url(ep_naturalwhite.png)">
-        <header>
-            
-        <!--my name in a teal box with white text-->
-        <section class="headerContent">
-            <h1 id="headerName">Jamie Reaves</h1>
-            <!--navigation bar linking the three component pages-->
-            <nav class="topnav">
-                <!--create three links: a placeholder link for the current page & links
-                    to the other two pages-->
-                <a id="about" href="index.html">About</a>
-                <a id="contact" href="contact.html">Contact</a>
-                <a id="portfolio" href="#">Portfolio</a>
-            </nav>
-        </section>
         
+        <header>
+            <!--my name in a teal box with white text-->
+            <section class="headerContent">
+                <h1 id="headerName">Jamie Reaves</h1>
+                <!--navigation bar linking the three component pages-->
+                <nav class="topnav">
+                    <!--create three links: a placeholder link for the current page & links
+                    to the other two pages-->
+                    <a id="about" href="index.html">About</a>
+                    <a id="contact" href="contact.html">Contact</a>
+                    <a id="portfolio" href="#">Portfolio</a>
+                </nav>
+            </section>
         </header>
+    
+    <!--container for main content and side bar-->
     <div class="parentBox">
         <!--central box with main content-->
         <div class="mainContent">
             <!--header for the "porfolio" section-->
             <h1 id="contentHeader">Portfolio</h1>
             <br>
-            <!--box for portfolio content: three rows containing placeholder links with
-                images-->
+            <!--parent box for portfolio content-->
             <section class="portfolioBody">
                 
-                
+                    <!--portfolio links with images and descriptions-->
                     <a class="portLink" href="#">
                         <img class="portPhoto" src="assets/images/bento.jpg" alt="Hangman">
                         <p class="imgDesc">Hangman</p>
@@ -68,16 +69,18 @@
                         <img class="portPhoto" src="assets/images/surf.jpg" alt="Rock Paper Scissors">
                         <p class="imgDesc">Rock Paper Scissors</p>
                     </a>
-                
-                    
+                        
             </section>
         </div>
     
         <!--central box with social sidebar-->
         <div class="sideBar">
-                <div id="sideBarHeader">Connect with me</div>
+            <!--sidebar header message-->    
+            <div id="sideBarHeader">Connect with me</div>
                 <br>
+                <!--parent box for social links-->
                 <div class="sLinksCont">
+                    <!--three social links with associated images-->
                     <a class="socialLinks" href="#">
                         <img class="socTab" src="assets/images/GitHub-Mark-32px.png" class="social" alt="Github">
                     </a>

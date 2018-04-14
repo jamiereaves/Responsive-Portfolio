@@ -118,14 +118,18 @@ file folder tab. add subtle shadow to top and left sides to acceny*/
     box-shadow:1px 0px 2px 0px #777777;
 }
 
+/*set display of parent box to flex so that the main content and sidebar align properly.
+set justify-content to center so that child elements space properly. set top/bottom margins
+to 0 and left/right to 10% so the main content and sidebar align with the header properly.*/
 .parentBox {
     display:flex;
     justify-content: center;
     margin: 0 10%;
 }
 /*Parent box for the main content of the page. set background/font colors. set appropriate
-font. set width to 960 px. auto margin so that the content stays centered if the browser 
-window width is altered. set thin, solid, grey border with very subtly rounded edges.*/
+font. set width to 60% of parent box. auto margins on top, right and bottom sides. no left 
+margin so main content lies flush with the parent box on that side. set thin, solid, grey 
+border with very subtly rounded edges. change display to inline-block so content displays properly.*/
 .mainContent{
     background: #ffffff;
     color: #777777;
@@ -139,6 +143,11 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
     display:inline-block;
 }
 
+/*Parent box for the main content of the page. set background/font colors. set appropriate
+font. set width to 35% of parent box. auto margins on bottom and left sides. no margin on
+top so sidebar is aligned vertically with the main content. no margin on the right so main
+content lies flush with the parent box on that side. set thin, solid, grey border with very 
+subtly rounded edges.*/
 .sideBar {
     background: #ffffff;
     color: #777777; 
@@ -148,11 +157,11 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
     border-color: #777777;
     border-width: 1px;
     border-radius: 2px;
-    /*float: left;*/
+   
 }
 /* header for the main content. set background/font colors. set padding/indentation to place 
 text appropriately. set right/left margins only to align content header text with page header
-text. thin, solid, grey border on the bottom only. set appropriate font.*/
+text. thin, solid, grey border on the bottom only. set appropriate font family, size, and weight.*/
 #contentHeader {
     color:#4aaaa5;
     background: #ffffff;
@@ -167,6 +176,9 @@ text. thin, solid, grey border on the bottom only. set appropriate font.*/
     font-weight: bold;
 }
 
+/* header for the sidebar. set background/font colors. set padding/indentation to place text appropriately. 
+center text horizontally. set right/left margins only to align content header text with page header
+text. thin, solid, grey border on the bottom only. set appropriate font family, size, and weight.*/
 #sideBarHeader {
     color:#4aaaa5;
     background: #ffffff;
@@ -186,18 +198,24 @@ text. thin, solid, grey border on the bottom only. set appropriate font.*/
     margin: 0px 20px 25px 20px;
 }
 
+/*set appropriate margins for the contents of the sidebar. set display to flex
+to align social links. center links within this container.*/
 .sLinksCont {
     margin: 15px 20px 25px 20px;
     display: flex;
     justify-content: center;
 }
 
+/*set width of social links to 30% of parent container with a max width of 40px.
+auto margins to space links evenly.*/
 .socialLinks {
     width:30%;
     max-width: 40px;
     margin:auto;
 }
 
+/*images for the social links take up 100% of the parent containers and scale
+as browser width changes.*/
 .socTab{
     width:100%;
     height: auto;
@@ -213,9 +231,9 @@ is not visible, but takes up space on the page*/
     visibility: hidden;
 }
 
-/*fix the footer to the bottom of the browser window. make footer as wide as the
+/*fix the footer to the bottom of the page. make footer as wide as the
 browser window. set height to 40 px. grey background. solid, teal top border with
-a larger width than the header border.*/
+a larger width than the header's bottom border.*/
 .footer {
     position: fixed;
     left: 0;
@@ -239,7 +257,8 @@ align the text vertically*/
 
 /*******************INDEX.HTML SPECIFIC CSS*********************************/
 
-/*set height/width for image. float left so that the text wraps appopriately.
+/*set width for image (60% of main content box). set height to auto so the image 
+scales with the browser window. float left so that the text wraps appopriately.
 set the right and bottom margins to place text appropriately. round corners
 subtly, but more than main content box*/
 #bioPhoto{
@@ -269,9 +288,9 @@ affected by padding/borders. round corners*/
     border-radius: 5px;
 }
 
-/*for message field. set padding to give space within the field to make text more 
-readable. set top and bottom margins to create space vertically between fields. bs-bb 
-so width/height aren't affected by padding/borders. round corners. Resize:none - so
+/*for message field. set width to 100% of the parent container. set padding to give space 
+within the field to make text more readable. set top and bottom margins to create space vertically 
+between fields. bs-bb so width/height aren't affected by padding/borders. round corners. Resize:none - so
 the size of the message field can't be collapsed.*/
 .longForm{
     
@@ -362,18 +381,21 @@ create a click effect*/
     clear:both;
 }
 
+/*set margins on left, bottom, and right for the portfolio content. set 
+display to flex so that portfolio links align properfly. set flex-direction
+to column so that the links align properky within portfolioBody*/
 .portfolioBody {
         margin: 0px 20px 25px 20px;
         display: flex;
         flex-direction: column;
 }
 
-/*for portfolio links. set width to 30% of main content box to create appropriately
-sized elements for a row of three. set height to mirror example parameters (207px).
-float left so link elements line up appropriately (hug the left). set right/left 
-margins to create space between elements. round corners. set position relative so
-children elements can be positioned. create solid, teal border. relatively pronounced
-grey shadow to indicate active link.*/
+/*for portfolio links. set width to 75% of main content box to create one column of 
+appropriately sized elements. set top and bottom margins to 10 px to create vertical space 
+between links. set left/right margins to auto to center within the parent container. float left 
+so link elements stack up appropriately. set right/left margins to create space between elements. 
+round corners. set position relative so children elements can be positioned. create solid, teal 
+border. relatively pronounced grey shadow to indicate active link.*/
 .portLink{
     width:75%;
     float:left;
@@ -390,7 +412,7 @@ grey shadow to indicate active link.*/
 parent's to remove weird empty space at corners.*/
 .portPhoto {
     width:100%;
-    height:90%;
+    height:auto;
     border-radius:10px 10px 5px 5px;
     padding: 0 0 -15px 0;
     position:relative;
@@ -398,10 +420,10 @@ parent's to remove weird empty space at corners.*/
 }
 
 /*for portfolio link descriptions. set postion relative to parent (link) container. adjust top
-and bottom positions to place text in the desired vertical position relative to parent. center 
-text. adjust padding to place text vertically within element. set background/font colors. set
-large font size. hide element when not HOVER/ACTIVE. set transition time to create a more
-natural transition between states.*/
+and bottom positions to place text in the desired vertical position relative to parent-use percentages 
+so text remains within the teal background as the image resizes. center text. adjust padding to place text 
+vertically within element. set background/font colors. set large font size. hide element when not HOVER/ACTIVE. 
+set transition time to create a more natural transition between states.*/
 .imgDesc {
     position: absolute;
     top:50%;
@@ -415,7 +437,6 @@ natural transition between states.*/
     color: #ffffff;
     font-size:24px;
     display:none;
-    margin-bottom: 40px;
     opacity:0;
     transition:opacity .4s, visibility .2s;
 }
@@ -456,20 +477,26 @@ natural transition between states.*/
 
 /******************************MEDIA QUERIES****************************/
 
+/*css for screen widths smaller than 640px*/
 @media only screen and (max-width: 640px) {
-    
+    /*double header height to allow the header name and topnav links to stack on top 
+    of each other*/
     header{
         height:130px;
     }
-
+    /*visual queue for screen width testing. commented out for final website, but useful
+    for editing
     .mainContent {
         color:blue;
-    }
+    }*/
 
+    /*set header content to fill entire screen*/
     .headerContent {
         width:100%;
     }
     
+    /*set header name to full screen width and half the height of the parent container. position
+    absolutely at the top of the parent container. eliminate rounded edges. center text.*/
     #headerName{
         width:100%;
         height:50%;
@@ -479,6 +506,10 @@ natural transition between states.*/
         text-align:center;
     }
    
+    /*set topnav to full screen width and half the height of the parent container. position absolutely 
+    at the top of the parent container. eliminate margins and float left instead of right. set display
+    to flex so that links within can easily be spaced horizontally and center these links within the 
+    topnav.*/
     .topnav {
         width: 100%;
         height:50%;
@@ -489,6 +520,8 @@ natural transition between states.*/
         justify-content:center;
     }
 
+    /*set width of topnav links to occupy 1/3 of parent container. set margin to auto to evenly space.
+    align links along the bottomm of the parent container.*/
     #about,
     #contact,
     #portfolio {
@@ -496,80 +529,111 @@ natural transition between states.*/
         margin:auto;
         bottom:0;
         }
-
+    
+    /*eliminate rounded corners on ACTIVE/HOVER links*/
     #about:hover, #about:active,
     #contact:hover, #contact:active,
     #portfolio:hover, #portolio:active {
         border-radius:0;
         }
 
+    /*set margins to center parentBox on page. change display to inline block so 
+    text and other content displays correctly (i.e. not flex). set appropriate 
+    width*/
     .parentBox {
         margin:0 4%;
         display: inline-block;
         width:90%;
     }
     
+    /*main content box same width as parent box. float left so main content and 
+    sidebar stack. center horizontally with auto margins on left and right. set
+    bottom margin to create space between the main content and sidebar*/
     .mainContent {
         width:100%;
         float:left;
         margin: auto auto 20px auto;
     }
     
+    /* sidebar box same width as parent box. float left so main content and sidebar 
+    stack. center with auto margins.*/
     .sideBar {
         width:100%;
         float:left;
         margin: auto;
         }
-
+    
+    /*adjusts width so that the photo is as wide as the main content box. set height
+    to auto so that the photo scales with the browser width. add bottom margin to
+    separate photo from text*/
     #bioPhoto {
         width:100%;
         height:auto;
         margin-bottom: 5px;
         }
         
-
 }
 
+/*css for screen widths between 640px and 768px*/
 @media only screen and (min-width:640px) and (max-width:768px) {
 
+    /*visual queue for screen width testing. commented out for final website, but useful
+    for editing
     .mainContent {
         color: red;
-    }
+    }*/
 
+    /*set width of header content so that it aligns with the main content now that the 
+    main content and sidebar are now stacked. center with auto margins.*/
     .headerContent {
         width:92%;
         margin: auto;
     }
 
+    /*set margins to center parentBox on page. change display to inline block so 
+    text and other content displays correctly (i.e. not flex). set appropriate 
+    width*/
     .parentBox {
         margin:0 4%;
         display: inline-block;
         width:90%
     }
 
+    /*main content box same width as parent box. float left so main content and 
+    sidebar stack. center horizontally with auto margins on left and right. set
+    bottom margin to create space between the main content and sidebar*/
     .mainContent {
         width:100%;
         float:left;
         margin: auto auto 20px auto;
     }
 
+    /* sidebar box same width as parent box. float left so main content and sidebar 
+    stack. center with auto margins.*/
     .sideBar {
         width:100%;
         float:left;
         margin: auto;
     }
 
+    /*set width of photo to 40% of the parent container. set height to auto so the 
+    photo scales to browser width. eliminate bottom margin for aesthetic reasons.*/
     #bioPhoto {
         width:40%;
         height:auto;
         margin-bottom: 0;
     }
 
+    /*set portfolio links to 40% of the parent container and margins appropriately
+    so the portfolio links display with two rows of two links and one row with one
+    link.*/
     .portLink{
        width: 40%;
        margin: 10px 3.5%;
     }
 
+    /*change portfolioBody display from flex to inlne-block so that portfolio links
+    (children elements) align as described above*/
     .portfolioBody {
         display:inline-block;
     }
