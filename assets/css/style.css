@@ -638,3 +638,7 @@ set transition time to create a more natural transition between states.*/
         display:inline-block;
     }
 }
+
+/* did not add any @media only screen and (max-width:980px) media queries because the default css is
+for this size and anything above 768px will display this way. hope i didn't misunderstand
+the assignment since my page matches the screenshots from the instructions.*/
