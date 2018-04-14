@@ -533,7 +533,7 @@ set transition time to create a more natural transition between states.*/
     /*eliminate rounded corners on ACTIVE/HOVER links*/
     #about:hover, #about:active,
     #contact:hover, #contact:active,
-    #portfolio:hover, #portolio:active {
+    #portfolio:hover, #portfolio:active {
         border-radius:0;
         }
 
