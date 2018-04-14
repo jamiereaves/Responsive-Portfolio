@@ -575,7 +575,7 @@ set transition time to create a more natural transition between states.*/
 }
 
 /*css for screen widths between 640px and 768px*/
-@media only screen and (min-width:640px) and (max-width:768px) {
+@media only screen and (min-width:641px) and (max-width:768px) {
 
     /*visual queue for screen width testing. commented out for final website, but useful
     for editing
