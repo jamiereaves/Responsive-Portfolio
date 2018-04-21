@@ -403,6 +403,7 @@ border. relatively pronounced grey shadow to indicate active link.*/
     border-radius: 20px;    
     position:relative;
     border-style: solid;
+    background-color:#4aaaa5;
     border-color: #4aaaa5;
     border-width: 8px;
     box-shadow:5px 5px 3px 0px grey;
